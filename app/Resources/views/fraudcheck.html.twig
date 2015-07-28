@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="{{ asset('css/main.css') }}" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="{{ asset('js/main.js') }}"></script>
+
+<div id="container">
+
+    <div class="menu">
+        <span>Frank Avery 2015</span>
+    </div>
+
+    <div class="bubble">
+        <div class="rectangle"><h2>Fraud Checker</h2></div>
+        <div class="triangle-l"></div>
+        <div class="triangle-r"></div>
+        <div class="info">
+            <form method="post">
+                <div align="center">
+                    <span id="errors">
+                        {% for error in errors %}
+                            <p>{{ error }}</p>
+                        {% endfor %}
+                    </span>
+                    <br />
+
+                    <input autocomplete="off" autofocus="autofocus" type="text" id="name" name="name" class="form-control" placeholder="Business Name">
+                    <br />
+
+                    <input autocomplete="off" type="text" id="amount" name="amount" class="form-control" placeholder="123.45">
+                    <br />
+
+                    <input autocomplete="off" type="text" id="address" name="address" class="form-control" placeholder="123 Main Street">
+                    <br />
+
+                    <input autocomplete="off" type="text" id="city" name="city" class="form-control" placeholder="Faketown">
+                    <input autocomplete="off" type="text" id="state" name="state" class="form-control" placeholder="MI">
+                    <input autocomplete="off" type="text" id="zip" name="zip" class="form-control" placeholder="48240">
+                    <br /><br />
+
+                    <input type="submit" class="btn btn-primary" name="submit" value="Submit">
+                    <br /><br />
+
+                    <span class="result">{{ result }}</span>
+                    <br /><br />
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
