@@ -1,4 +1,4 @@
-fraud_checker_app
+fraud_checker
 ==============
 
 ![Screenshot](http://i.imgur.com/KKVT1ce.png "Interface")
